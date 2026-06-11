@@ -119,12 +119,12 @@
   </style>
   <link href="assets/css/frame.css" rel="stylesheet"/></head>
 <body class="dark bg-background text-on-background font-body-md min-h-screen flex flex-col">
-<header class="sticky top-0 z-20 flex items-center justify-between px-margin-mobile py-4 bg-background/90 backdrop-blur-md border-b border-outline-variant/30">
+<header class="sticky top-0 z-50 flex items-center justify-between px-margin-mobile md:px-margin-desktop py-4 bg-background/90 backdrop-blur-md border-b border-outline-variant/30">
   <button aria-label="Voltar"><span class="material-symbols-outlined">arrow_back</span></button>
   <h1 class="font-label-caps text-label-caps tracking-[0.25em]">O MEU SACO</h1>
   <span class="w-6"></span>
 </header>
-<main class="flex-1 px-margin-mobile pt-6 pb-12">
+<main class="flex-1 px-margin-mobile pt-6 pb-24 md:pb-12">
   <article class="flex gap-4 py-5 border-b border-outline-variant/30">
     <div class="w-24 h-24 bg-surface-container-low flex items-center justify-center shrink-0 overflow-hidden">
       <img alt="MERIDIAN Nautilus 40, vista do mostrador em aço escovado com acabamentos dourados." class="w-24 h-24 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhhZnowa0WzVqg9HFZCBPoii-hNfUxXy7vzGeGgyhrpH9U9bB-zAhI0I0PgvLx7GGQOWGnmaH2BaW_JZ9uuWLRbguVhDddmqcDXF6Ok2w9UzDW_La_oRaWAr7v7T_T2YbPPeGjsY26g7GepJ9kBdcujZ2ivo-fMNsx_c-OqNyRurHfMFbJJ42JmhPFeNrNXknGGGm2fx-gUOXfz4qoiYR3oJsjz7VBKT908QnBpM2Yx7YduKZQmC8M_uaBidS5xgib_vkXORcdXGc"/>
@@ -150,5 +150,33 @@
   <button class="w-full py-4 mt-8 bg-primary-container text-on-primary-container font-label-caps text-label-caps tracking-[0.2em]">FINALIZAR COMPRA</button>
   <a class="block text-center text-on-surface-variant text-sm mt-4 underline underline-offset-4" href="resultados-da-pesquisa.html">Continuar a explorar</a>
 </main>
+<!-- Footer -->
+<footer class="w-full px-margin-mobile md:px-margin-desktop py-stack-md flex flex-col items-center gap-unit text-center bg-surface-container-low border-t border-outline-variant/30 mt-stack-lg">
+<h2 class="font-headline-md text-headline-md text-primary tracking-widest mb-4">MERIDIAN</h2>
+<div class="flex flex-wrap justify-center gap-6 mb-8">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline transition-all" href="#">Localizador de Boutiques</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline transition-all" href="#">Serviço de Manutenção</a>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-60">© 2024 MERIDIAN. TODOS OS DIREITOS RESERVADOS.</p>
+</footer>
+<!-- BottomNavBar (Mobile only) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 flex justify-around items-center bg-surface-container-lowest py-2 border-t border-outline-variant/30">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-caps text-[10px] uppercase">Início</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="watch">watch</span>
+<span class="font-label-caps text-[10px] uppercase">Coleção</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="font-label-caps text-[10px] uppercase">Pesquisa</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-caps text-[10px] uppercase">Conta</span>
+</a>
+</nav>
 <script src="assets/js/nav.js"></script>
 </body></html>
