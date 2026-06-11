@@ -7,6 +7,7 @@
     min-height: 100vh;
   }
   body {
+    position: relative; /* ancora elementos absolutos (ex.: ambient-glow) ao frame, não ao viewport */
     max-width: 430px;
     margin: 40px auto !important;
     min-height: calc(100vh - 80px);
