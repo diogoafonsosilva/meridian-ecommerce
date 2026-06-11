@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-PT"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MERIDIAN | Detalhe do Produto</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&amp;family=Libre+Caslon+Text:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #091518;
+            color: #ede1d1;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#211b11",
+                        "surface-tint": "#ffba21",
+                        "on-tertiary-container": "#00516c",
+                        "on-tertiary-fixed": "#001e2b",
+                        "on-tertiary": "#003548",
+                        "on-background": "#ede1d1",
+                        "surface-container": "#251f15",
+                        "outline-variant": "#504533",
+                        "primary-fixed": "#ffdea8",
+                        "on-tertiary-fixed-variant": "#004d67",
+                        "surface-container-lowest": "#130d05",
+                        "on-error-container": "#ffdad6",
+                        "surface-dim": "#181309",
+                        "surface-bright": "#3f382d",
+                        "surface-container-highest": "#3b3429",
+                        "on-secondary": "#402d00",
+                        "surface": "#181309",
+                        "secondary-fixed-dim": "#f6be3b",
+                        "on-primary-fixed": "#271900",
+                        "inverse-surface": "#ede1d1",
+                        "secondary-fixed": "#ffdea0",
+                        "on-primary-fixed-variant": "#5e4200",
+                        "on-secondary-fixed": "#261a00",
+                        "tertiary-fixed-dim": "#73d1ff",
+                        "on-error": "#690005",
+                        "secondary-container": "#c29100",
+                        "secondary": "#f6be3b",
+                        "background": "#181309",
+                        "surface-variant": "#3b3429",
+                        "tertiary-container": "#43c8ff",
+                        "tertiary-fixed": "#c1e8ff",
+                        "on-primary-container": "#634500",
+                        "primary": "#ffd07c",
+                        "on-surface-variant": "#d5c4ac",
+                        "error-container": "#93000a",
+                        "tertiary": "#a4dfff",
+                        "on-surface": "#ede1d1",
+                        "inverse-primary": "#7c5800",
+                        "primary-container": "#f3af00",
+                        "outline": "#9d8f79",
+                        "inverse-on-surface": "#362f25",
+                        "on-secondary-container": "#402e00",
+                        "primary-fixed-dim": "#ffba21",
+                        "on-secondary-fixed-variant": "#5c4300",
+                        "on-primary": "#422d00",
+                        "surface-container-high": "#30291f",
+                        "error": "#ffb4ab"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "stack-lg": "64px",
+                        "gutter": "32px",
+                        "container-max": "1280px",
+                        "stack-sm": "16px",
+                        "unit": "8px",
+                        "stack-md": "32px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Libre Caslon Text"],
+                        "currency-display": ["Libre Caslon Text"],
+                        "label-caps": ["Hanken Grotesk"],
+                        "display-lg": ["Libre Caslon Text"],
+                        "headline-lg": ["Libre Caslon Text"],
+                        "headline-md": ["Libre Caslon Text"],
+                        "body-lg": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                        "currency-display": ["20px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  <link href="assets/css/frame.css" rel="stylesheet"/></head>
+<body class="dark bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<header class="sticky top-0 z-20 flex items-center justify-between px-margin-mobile py-4 bg-background/90 backdrop-blur-md border-b border-outline-variant/30">
+  <button aria-label="Voltar"><span class="material-symbols-outlined">arrow_back</span></button>
+  <img alt="MERIDIAN" class="h-5" src="assets/img/meridian-wordmark.svg"/>
+  <button aria-label="Saco"><span class="material-symbols-outlined">shopping_bag</span></button>
+</header>
+<main class="flex-1 pb-12">
+  <section class="aspect-square bg-surface-container-low flex items-center justify-center">
+    <img alt="" class="w-3/4 h-3/4 object-contain" id="pdp-img" src="assets/img/screens/resultados-da-pesquisa.png"/>
+  </section>
+  <section class="px-margin-mobile pt-8">
+    <p class="font-label-caps text-label-caps text-primary tracking-[0.25em]" id="pdp-colecao">NAUTILUS</p>
+    <h1 class="font-headline-lg-mobile text-headline-lg-mobile mt-2" id="pdp-nome">MERIDIAN Nautilus 40</h1>
+    <p class="text-on-surface-variant text-sm mt-1" id="pdp-ref">Ref. MN-4001</p>
+    <p class="font-currency-display text-currency-display text-primary mt-4" id="pdp-preco">€24.500,00</p>
+  </section>
+  <section class="px-margin-mobile mt-8">
+    <h2 class="font-label-caps text-label-caps text-on-surface-variant tracking-[0.2em] mb-4">ESPECIFICAÇÕES</h2>
+    <dl class="divide-y divide-outline-variant/30 border-y border-outline-variant/30">
+      <div class="flex justify-between py-3"><dt class="text-on-surface-variant">Movimento</dt><dd id="pdp-mov">Automático, Cal. M-310</dd></div>
+      <div class="flex justify-between py-3"><dt class="text-on-surface-variant">Caixa</dt><dd id="pdp-caixa">Aço, 40mm</dd></div>
+      <div class="flex justify-between py-3"><dt class="text-on-surface-variant">Bracelete</dt><dd id="pdp-brac">Aço integrado</dd></div>
+      <div class="flex justify-between py-3"><dt class="text-on-surface-variant">Resistência</dt><dd>12 ATM</dd></div>
+    </dl>
+    <a class="inline-flex items-center gap-1 text-primary text-sm mt-4" href="guia-de-tamanhos.html">
+      <span class="material-symbols-outlined text-sm">straighten</span> Guia de Tamanhos
+    </a>
+  </section>
+  <section class="px-margin-mobile mt-10 flex flex-col gap-3">
+    <button class="w-full py-4 bg-primary-container text-on-primary-container font-label-caps text-label-caps tracking-[0.2em]">ADICIONAR AO SACO</button>
+    <button class="w-full py-4 border border-outline text-on-surface font-label-caps text-label-caps tracking-[0.2em] flex items-center justify-center gap-2">
+      <span class="material-symbols-outlined text-sm">favorite</span> LISTA DE DESEJOS
+    </button>
+  </section>
+</main>
+<script>
+  // Catálogo do protótipo.
+  var CATALOGO = {
+    'nautilus-40':  {nome:'MERIDIAN Nautilus 40',     ref:'MN-4001', preco:'€24.500,00', colecao:'NAUTILUS',  mov:'Automático, Cal. M-310', caixa:'Aço, 40mm',        brac:'Aço integrado',     img:'https://lh3.googleusercontent.com/aida-public/AB6AXuAhhZnowa0WzVqg9HFZCBPoii-hNfUxXy7vzGeGgyhrpH9U9bB-zAhI0I0PgvLx7GGQOWGnmaH2BaW_JZ9uuWLRbguVhDddmqcDXF6Ok2w9UzDW_La_oRaWAr7v7T_T2YbPPeGjsY26g7GepJ9kBdcujZ2ivo-fMNsx_c-OqNyRurHfMFbJJ42JmhPFeNrNXknGGGm2fx-gUOXfz4qoiYR3oJsjz7VBKT908QnBpM2Yx7YduKZQmC8M_uaBidS5xgib_vkXORcdXGc', alt:'Vista macro do mostrador do MERIDIAN Nautilus 40, em aço escovado com acabamentos dourados.'},
+    'calatrava-36': {nome:'MERIDIAN Calatrava 36',    ref:'MC-3602', preco:'€18.900,00', colecao:'CALATRAVA', mov:'Manual, Cal. M-215',     caixa:'Ouro rosa, 36mm',  brac:'Pele de aligátor',  img:'https://lh3.googleusercontent.com/aida-public/AB6AXuBtNznGCNJKOxHg6b74V3jSMpagXyFojaBAKm5yQkPmhnbZps7OSINILpNIbTA5C0SQJLURq5cysKMt34C2dlJOn58aJe2XZ4RjKDU89-AUuzDE4LiOgq3vjeUk0yLACr2ojuJoc9AdAAqq8uNCDakU8WuYlj5_H1L7oOGW85Ego2u6683Bbz6n3quydIBgsCqg6xVC0V9lI8FokgYcowd_n2LPTemp6pKgy9T0Z82XqZbmTm1qcRSmmGfkn42XK5aNQfGN5B8KHA4', alt:'MERIDIAN Calatrava 36 em ouro rosa, com mostrador marfim e bracelete em pele de aligátor.'},
+    'aquanaut-44':  {nome:'MERIDIAN Aquanaut 44',     ref:'MA-4403', preco:'€21.300,00', colecao:'AQUANAUT',  mov:'Automático, Cal. M-324', caixa:'Titânio, 44mm',    brac:'Borracha técnica',  img:'https://lh3.googleusercontent.com/aida-public/AB6AXuBj1_wsrujp4-VIPkvCT42QQVU1xkjigWRvAWuqFRI02qw1H_-KleMJmhuEcA5LROEsnmH40eKM3oh_54Z9mcTBMGs3NdFSqz5ddII4qSbW1VoLDE38pJSNb1SLCeXd_CfRziLUwvch4wyG_eatlgJnk9AABT5dNxprkasxoaqDuwcVyoPAwi-SqUPsgrNZ-TSxMiW2p6y5K5II1e7St8JHgyRPSDPD1H1rOdbJkplniijrWs8rQBhMcxHzIB1opqdCvLVUpuCaEx4', alt:'MERIDIAN Aquanaut 44 em titânio, com mostrador preto e bracelete em borracha técnica.'},
+    'regulateur-40':{nome:'MERIDIAN Grand Régulateur',ref:'GR-4004', preco:'€36.700,00', colecao:'HERITAGE',  mov:'Manual, Cal. M-501',     caixa:'Platina, 40mm',    brac:'Pele de aligátor',  img:'https://lh3.googleusercontent.com/aida-public/AB6AXuBtNznGCNJKOxHg6b74V3jSMpagXyFojaBAKm5yQkPmhnbZps7OSINILpNIbTA5C0SQJLURq5cysKMt34C2dlJOn58aJe2XZ4RjKDU89-AUuzDE4LiOgq3vjeUk0yLACr2ojuJoc9AdAAqq8uNCDakU8WuYlj5_H1L7oOGW85Ego2u6683Bbz6n3quydIBgsCqg6xVC0V9lI8FokgYcowd_n2LPTemp6pKgy9T0Z82XqZbmTm1qcRSmmGfkn42XK5aNQfGN5B8KHA4', alt:'MERIDIAN Grand Régulateur em platina, com mostrador marfim e bracelete em pele de aligátor.'}
+  };
+  var p = CATALOGO[new URLSearchParams(location.search).get('id')] || CATALOGO['nautilus-40'];
+  ['nome','ref','preco','colecao','mov','caixa','brac'].forEach(function(k){
+    var el = document.getElementById('pdp-'+k);
+    if (el) el.textContent = k==='ref' ? 'Ref. '+p.ref : p[k];
+  });
+  var pdpImg = document.getElementById('pdp-img');
+  if (pdpImg && p.img) {
+    pdpImg.src = p.img;
+    pdpImg.alt = p.alt || '';
+    pdpImg.classList.remove('object-contain');
+    pdpImg.classList.add('w-full', 'h-full', 'object-cover');
+  }
+  document.title = 'MERIDIAN | ' + p.nome;
+</script>
+<script src="assets/js/nav.js"></script>
+</body></html>
