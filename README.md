@@ -1,5 +1,7 @@
 # MERIDIAN — Luxury Watch E-commerce
 
+**🔗 Live:** https://diogoafonsosilva.github.io/meridian-ecommerce/
+
 Protótipo de e-commerce de relojoaria de luxo (marca fictícia MERIDIAN). 15 páginas HTML standalone
 (Tailwind via CDN + Google Fonts), interface em português, fluxo de compra completo e clicável.
 Base gerada com Google Stitch; navegação, catálogo coerente, PDP e carrinho adicionados depois.
