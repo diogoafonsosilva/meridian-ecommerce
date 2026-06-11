@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="en"><head>
+<html class="dark" lang="pt-PT"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -154,29 +154,29 @@
 <div class="w-8 h-8 rounded-full border border-primary flex items-center justify-center text-primary bg-primary/10">
 <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">check</span>
 </div>
-<span class="font-label-caps text-label-caps text-primary">SHIPPING</span>
+<span class="font-label-caps text-label-caps text-primary">ENTREGA</span>
 </div>
 <div class="stepper-line active mx-4"></div>
 <div class="flex flex-col items-center gap-2">
 <div class="w-8 h-8 rounded-full border-2 border-primary flex items-center justify-center text-primary font-bold">2</div>
-<span class="font-label-caps text-label-caps text-primary">PAYMENT</span>
+<span class="font-label-caps text-label-caps text-primary">PAGAMENTO</span>
 </div>
 <div class="stepper-line mx-4"></div>
 <div class="flex flex-col items-center gap-2">
 <div class="w-8 h-8 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant">3</div>
-<span class="font-label-caps text-label-caps text-on-surface-variant">REVIEW</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">REVISÃO</span>
 </div>
 </div>
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
 <!-- Payment Section (Left) -->
 <div class="lg:col-span-8 space-y-stack-md">
 <section>
-<h2 class="font-headline-md text-headline-md mb-stack-sm uppercase tracking-tight">Payment Method</h2>
+<h2 class="font-headline-md text-headline-md mb-stack-sm uppercase tracking-tight">Método de Pagamento</h2>
 <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
 <!-- Card Option -->
 <div class="luxury-card active-payment p-4 cursor-pointer flex flex-col items-center justify-center gap-2" onclick="selectPayment(this)">
 <span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">credit_card</span>
-<span class="font-label-caps text-label-caps text-primary">CARD</span>
+<span class="font-label-caps text-label-caps text-primary">CARTÃO</span>
 </div>
 <!-- MB WAY Option -->
 <div class="luxury-card p-4 cursor-pointer flex flex-col items-center justify-center gap-2" onclick="selectPayment(this)">
@@ -200,12 +200,12 @@
 <!-- Cardholder Name -->
 <div class="relative group">
 <input class="peer w-full bg-transparent border-0 border-b border-outline-variant py-2 focus:border-primary transition-colors text-on-surface placeholder-transparent" id="cardholder" placeholder=" " type="text"/>
-<label class="absolute left-0 -top-4 font-label-caps text-label-caps text-on-surface-variant peer-placeholder-shown:top-2 peer-placeholder-shown:text-body-md peer-focus:-top-4 peer-focus:text-label-caps peer-focus:text-primary transition-all" for="cardholder">CARDHOLDER NAME</label>
+<label class="absolute left-0 -top-4 font-label-caps text-label-caps text-on-surface-variant peer-placeholder-shown:top-2 peer-placeholder-shown:text-body-md peer-focus:-top-4 peer-focus:text-label-caps peer-focus:text-primary transition-all" for="cardholder">NOME NO CARTÃO</label>
 </div>
 <!-- Card Number -->
 <div class="relative group">
 <input class="peer w-full bg-transparent border-0 border-b border-outline-variant py-2 focus:border-primary transition-colors text-on-surface placeholder-transparent" id="cardnumber" placeholder=" " type="text"/>
-<label class="absolute left-0 -top-4 font-label-caps text-label-caps text-on-surface-variant peer-placeholder-shown:top-2 peer-placeholder-shown:text-body-md peer-focus:-top-4 peer-focus:text-label-caps peer-focus:text-primary transition-all" for="cardnumber">CARD NUMBER</label>
+<label class="absolute left-0 -top-4 font-label-caps text-label-caps text-on-surface-variant peer-placeholder-shown:top-2 peer-placeholder-shown:text-body-md peer-focus:-top-4 peer-focus:text-label-caps peer-focus:text-primary transition-all" for="cardnumber">NÚMERO DO CARTÃO</label>
 <span class="absolute right-0 top-2 material-symbols-outlined text-on-surface-variant/50">contactless</span>
 </div>
 </div>
@@ -213,7 +213,7 @@
 <!-- Expiry -->
 <div class="relative group md:col-span-1">
 <input class="peer w-full bg-transparent border-0 border-b border-outline-variant py-2 focus:border-primary transition-colors text-on-surface placeholder-transparent" id="expiry" placeholder=" " type="text"/>
-<label class="absolute left-0 -top-4 font-label-caps text-label-caps text-on-surface-variant peer-placeholder-shown:top-2 peer-placeholder-shown:text-body-md peer-focus:-top-4 peer-focus:text-label-caps peer-focus:text-primary transition-all" for="expiry">EXPIRY (MM/YY)</label>
+<label class="absolute left-0 -top-4 font-label-caps text-label-caps text-on-surface-variant peer-placeholder-shown:top-2 peer-placeholder-shown:text-body-md peer-focus:-top-4 peer-focus:text-label-caps peer-focus:text-primary transition-all" for="expiry">VALIDADE (MM/AA)</label>
 </div>
 <!-- CVV -->
 <div class="relative group md:col-span-1">
@@ -223,13 +223,13 @@
 </div>
 <div class="flex items-center gap-3 pt-4">
 <input class="w-4 h-4 rounded border-outline-variant bg-transparent text-primary focus:ring-primary ring-offset-background" id="savecard" type="checkbox"/>
-<label class="font-body-md text-body-md text-on-surface-variant cursor-pointer" for="savecard">Save this card for future acquisitions</label>
+<label class="font-body-md text-body-md text-on-surface-variant cursor-pointer" for="savecard">Guardar este cartão para futuras compras</label>
 </div>
 </section>
 <div class="flex items-center justify-between text-on-surface-variant/60 pt-4">
 <div class="flex items-center gap-2">
 <span class="material-symbols-outlined text-sm">lock</span>
-<span class="font-label-caps text-label-caps">Secure 256-bit SSL encrypted connection</span>
+<span class="font-label-caps text-label-caps">Ligação encriptada SSL de 256 bits</span>
 </div>
 <div class="flex gap-4">
 <img alt="Visa" class="h-4 opacity-50 grayscale hover:grayscale-0 transition-all cursor-default" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9WrL9v5B3Pmi7Oawde1v_MyfrDThguZ-ZBRbnxyLielAIhqCsoEVP6mwQNExpGA09LjKcze1eCw6pmrLlIfCxIRsJxFFzdvr7lcDANjN79_7erOqFMS2e8Ns68qIiXf0_uQUWoZSGYDR5--Tf4uR4kY506bvugdZ8kf4KeyfZjj753MCpaNe6A5yWwFn1Ue1lFgYAsZBFUsFpTL9DxLkxw5wsmlb-K1cweiU97uEoMmcR9_fItaGfgb9hkgYtSHxdpX0oyj0XSqQ"/>
@@ -240,7 +240,7 @@
 <!-- Order Summary Sidebar (Right) -->
 <aside class="lg:col-span-4 sticky top-24">
 <div class="luxury-card p-stack-md">
-<h3 class="font-headline-md text-headline-md mb-stack-sm border-b border-outline-variant/30 pb-4">ORDER SUMMARY</h3>
+<h3 class="font-headline-md text-headline-md mb-stack-sm border-b border-outline-variant/30 pb-4">RESUMO DA ENCOMENDA</h3>
 <!-- Item List -->
 <div class="space-y-4 mb-6">
 <div class="flex gap-4">
@@ -261,12 +261,12 @@
 <span>€24.500,00</span>
 </div>
 <div class="flex justify-between font-label-caps text-label-caps">
-<span class="text-on-surface-variant">SHIPPING</span>
-<span class="text-tertiary">COMPLIMENTARY</span>
+<span class="text-on-surface-variant">ENVIO</span>
+<span class="text-tertiary">OFERTA</span>
 </div>
 <div class="flex justify-between font-label-caps text-label-caps">
-<span class="text-on-surface-variant">VAT (23%)</span>
-<span>INCLUDED</span>
+<span class="text-on-surface-variant">IVA (23%)</span>
+<span>INCLUÍDO</span>
 </div>
 <div class="flex justify-between pt-4 border-t border-primary/30">
 <span class="font-headline-md text-headline-md">TOTAL</span>
@@ -275,11 +275,11 @@
 </div>
 <button class="w-full mt-stack-md bg-primary text-on-primary py-4 font-label-caps text-label-caps font-bold hover:bg-surface-tint transition-all flex items-center justify-center gap-2 group">
 <span class="material-symbols-outlined text-sm group-hover:scale-110 transition-transform" style="font-variation-settings: 'FILL' 1;">lock</span>
-                        COMPLETE TRANSACTION
+                        CONCLUIR TRANSAÇÃO
                     </button>
 </div>
 <p class="mt-4 text-center text-on-surface-variant/60 font-label-caps text-[10px] tracking-widest px-4">
-                    BY CLICKING COMPLETE TRANSACTION, YOU AGREE TO MERIDIAN'S TERMS OF SERVICE AND PRIVACY POLICY.
+                    AO CLICAR EM CONCLUIR TRANSAÇÃO, ACEITA OS TERMOS DE SERVIÇO E A POLÍTICA DE PRIVACIDADE DA MERIDIAN.
                 </p>
 </aside>
 </div>
@@ -288,10 +288,10 @@
 <footer class="bg-surface-container-low border-t border-outline-variant/30 w-full px-margin-mobile md:px-margin-desktop py-stack-md flex flex-col items-center gap-unit text-center mt-stack-lg">
 <h2 class="font-headline-md text-headline-md text-primary tracking-widest uppercase">MERIDIAN</h2>
 <div class="flex flex-wrap justify-center gap-6 my-4">
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline transition-all" href="#">Boutique Locator</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline transition-all" href="#">Watch Servicing</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline transition-all" href="#">Localizador de Boutiques</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline transition-all" href="#">Serviço de Manutenção</a>
 </div>
-<p class="font-label-caps text-label-caps text-on-surface-variant/60 mt-4 tracking-widest">© 2024 MERIDIAN. ALL RIGHTS RESERVED.</p>
+<p class="font-label-caps text-label-caps text-on-surface-variant/60 mt-4 tracking-widest">© 2024 MERIDIAN. TODOS OS DIREITOS RESERVADOS.</p>
 </footer>
 <script>
         function selectPayment(element) {
