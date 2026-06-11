@@ -35,6 +35,17 @@
     person: 'o-meu-perfil.html'
   };
 
+  // Botões que parecem CTAs primários mas não têm destino de página —
+  // em vez de ficarem mortos, dão uma confirmação inline ao clicar.
+  var ACK_BUTTONS = [
+    'agendar serviço',
+    'agendar consultoria virtual',
+    'contactar concierge',
+    'pedir reparação',
+    'agendar manutenção'
+  ];
+  var ACK_TEXT = 'PEDIDO RECEBIDO ✓';
+
   function norm(t) {
     return (t || '').replace(/\s+/g, ' ').trim().toLowerCase();
   }
@@ -85,6 +96,26 @@
       if (href && href !== '#' && href !== '') return; // já tem destino real
       var dest = routeFor(norm(el.textContent));
       if (dest) bind(el, dest);
+    });
+
+    // 3. Botões "ack": sem destino de página, mas com confirmação inline
+    // (ex.: "Agendar Serviço", "Contactar Concierge") — evita cliques mortos
+    // em CTAs que parecem primários.
+    document.querySelectorAll('button').forEach(function (el) {
+      if (el.dataset.navBound || el.dataset.ackBound) return;
+      var text = norm(el.textContent);
+      if (ACK_BUTTONS.indexOf(text) === -1) return;
+      el.dataset.ackBound = '1';
+      el.style.cursor = 'pointer';
+      el.addEventListener('click', function (e) {
+        e.preventDefault(); // evita submit/reload em botões dentro de <form>
+        if (el.dataset.acked) return;
+        el.dataset.acked = '1';
+        el.dataset.originalText = el.textContent;
+        el.textContent = ACK_TEXT;
+        el.disabled = true;
+        el.classList.add('opacity-80');
+      });
     });
   });
 })();
