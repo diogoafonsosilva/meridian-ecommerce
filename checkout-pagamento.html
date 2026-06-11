@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&family=Libre+Caslon+Text:wght@400;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&family=Libre+Caslon+Text:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#211b11",
+                        "surface-tint": "#ffba21",
+                        "on-tertiary-container": "#00516c",
+                        "on-tertiary-fixed": "#001e2b",
+                        "on-tertiary": "#003548",
+                        "on-background": "#ede1d1",
+                        "surface-container": "#251f15",
+                        "outline-variant": "#504533",
+                        "primary-fixed": "#ffdea8",
+                        "on-tertiary-fixed-variant": "#004d67",
+                        "surface-container-lowest": "#130d05",
+                        "on-error-container": "#ffdad6",
+                        "surface-dim": "#181309",
+                        "surface-bright": "#3f382d",
+                        "surface-container-highest": "#3b3429",
+                        "on-secondary": "#402d00",
+                        "surface": "#181309",
+                        "secondary-fixed-dim": "#f6be3b",
+                        "on-primary-fixed": "#271900",
+                        "inverse-surface": "#ede1d1",
+                        "secondary-fixed": "#ffdea0",
+                        "on-primary-fixed-variant": "#5e4200",
+                        "on-secondary-fixed": "#261a00",
+                        "tertiary-fixed-dim": "#73d1ff",
+                        "on-error": "#690005",
+                        "secondary-container": "#c29100",
+                        "secondary": "#f6be3b",
+                        "background": "#181309",
+                        "surface-variant": "#3b3429",
+                        "tertiary-container": "#43c8ff",
+                        "tertiary-fixed": "#c1e8ff",
+                        "on-primary-container": "#634500",
+                        "primary": "#ffd07c",
+                        "on-surface-variant": "#d5c4ac",
+                        "error-container": "#93000a",
+                        "tertiary": "#a4dfff",
+                        "on-surface": "#ede1d1",
+                        "inverse-primary": "#7c5800",
+                        "primary-container": "#f3af00",
+                        "outline": "#9d8f79",
+                        "inverse-on-surface": "#362f25",
+                        "on-secondary-container": "#402e00",
+                        "primary-fixed-dim": "#ffba21",
+                        "on-secondary-fixed-variant": "#5c4300",
+                        "on-primary": "#422d00",
+                        "surface-container-high": "#30291f",
+                        "error": "#ffb4ab"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "stack-lg": "64px",
+                        "gutter": "32px",
+                        "container-max": "1280px",
+                        "stack-sm": "16px",
+                        "unit": "8px",
+                        "stack-md": "32px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Libre Caslon Text"],
+                        "currency-display": ["Libre Caslon Text"],
+                        "label-caps": ["Hanken Grotesk"],
+                        "display-lg": ["Libre Caslon Text"],
+                        "headline-lg": ["Libre Caslon Text"],
+                        "headline-md": ["Libre Caslon Text"],
+                        "body-lg": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                        "currency-display": ["20px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .luxury-card {
+            background: #0e141a;
+            border: 1px solid #1a2329;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .luxury-card:hover {
+            box-shadow: 0 4px 20px rgba(243, 175, 0, 0.08);
+        }
+        .active-payment {
+            border-color: #f3af00 !important;
+            background: rgba(243, 175, 0, 0.05);
+        }
+        input:focus {
+            outline: none !important;
+            box-shadow: none !important;
+        }
+        .stepper-line {
+            height: 1px;
+            background: #504533;
+            flex-grow: 1;
+        }
+        .stepper-line.active {
+            background: #ffd07c;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-md min-h-screen">
+<!-- Top Navigation Bar (Shared Component Logic) -->
+<header class="bg-background border-b border-outline-variant/30 flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 sticky top-0 z-50">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-primary mr-4" style="font-variation-settings: 'FILL' 0;">language</span>
+<h1 class="font-headline-md text-headline-md text-primary tracking-widest uppercase">MERIDIAN</h1>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:text-surface-tint transition-colors" style="font-variation-settings: 'FILL' 0;">shopping_bag</span>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-md lg:py-stack-lg">
+<!-- Progress Bar -->
+<div class="flex items-center justify-between mb-stack-lg max-w-3xl mx-auto">
+<div class="flex flex-col items-center gap-2">
+<div class="w-8 h-8 rounded-full border border-primary flex items-center justify-center text-primary bg-primary/10">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<span class="font-label-caps text-label-caps text-primary">SHIPPING</span>
+</div>
+<div class="stepper-line active mx-4"></div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-8 h-8 rounded-full border-2 border-primary flex items-center justify-center text-primary font-bold">2</div>
+<span class="font-label-caps text-label-caps text-primary">PAYMENT</span>
+</div>
+<div class="stepper-line mx-4"></div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-8 h-8 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant">3</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant">REVIEW</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Payment Section (Left) -->
+<div class="lg:col-span-8 space-y-stack-md">
+<section>
+<h2 class="font-headline-md text-headline-md mb-stack-sm uppercase tracking-tight">Payment Method</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<!-- Card Option -->
+<div class="luxury-card active-payment p-4 cursor-pointer flex flex-col items-center justify-center gap-2" onclick="selectPayment(this)">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">credit_card</span>
+<span class="font-label-caps text-label-caps text-primary">CARD</span>
+</div>
+<!-- MB WAY Option -->
+<div class="luxury-card p-4 cursor-pointer flex flex-col items-center justify-center gap-2" onclick="selectPayment(this)">
+<span class="material-symbols-outlined text-on-surface-variant text-3xl">smartphone</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">MB WAY</span>
+</div>
+<!-- ATM Option -->
+<div class="luxury-card p-4 cursor-pointer flex flex-col items-center justify-center gap-2" onclick="selectPayment(this)">
+<span class="material-symbols-outlined text-on-surface-variant text-3xl">account_balance</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">ATM</span>
+</div>
+<!-- PayPal Option -->
+<div class="luxury-card p-4 cursor-pointer flex flex-col items-center justify-center gap-2" onclick="selectPayment(this)">
+<span class="material-symbols-outlined text-on-surface-variant text-3xl">account_balance_wallet</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">PAYPAL</span>
+</div>
+</div>
+</section>
+<section class="luxury-card p-stack-md space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Cardholder Name -->
+<div class="relative group">
+<input class="peer w-full bg-transparent border-0 border-b border-outline-variant py-2 focus:border-primary transition-colors text-on-surface placeholder-transparent" id="cardholder" placeholder=" " type="text"/>
+<label class="absolute left-0 -top-4 font-label-caps text-label-caps text-on-surface-variant peer-placeholder-shown:top-2 peer-placeholder-shown:text-body-md peer-focus:-top-4 peer-focus:text-label-caps peer-focus:text-primary transition-all" for="cardholder">CARDHOLDER NAME</label>
+</div>
+<!-- Card Number -->
+<div class="relative group">
+<input class="peer w-full bg-transparent border-0 border-b border-outline-variant py-2 focus:border-primary transition-colors text-on-surface placeholder-transparent" id="cardnumber" placeholder=" " type="text"/>
+<label class="absolute left-0 -top-4 font-label-caps text-label-caps text-on-surface-variant peer-placeholder-shown:top-2 peer-placeholder-shown:text-body-md peer-focus:-top-4 peer-focus:text-label-caps peer-focus:text-primary transition-all" for="cardnumber">CARD NUMBER</label>
+<span class="absolute right-0 top-2 material-symbols-outlined text-on-surface-variant/50">contactless</span>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<!-- Expiry -->
+<div class="relative group md:col-span-1">
+<input class="peer w-full bg-transparent border-0 border-b border-outline-variant py-2 focus:border-primary transition-colors text-on-surface placeholder-transparent" id="expiry" placeholder=" " type="text"/>
+<label class="absolute left-0 -top-4 font-label-caps text-label-caps text-on-surface-variant peer-placeholder-shown:top-2 peer-placeholder-shown:text-body-md peer-focus:-top-4 peer-focus:text-label-caps peer-focus:text-primary transition-all" for="expiry">EXPIRY (MM/YY)</label>
+</div>
+<!-- CVV -->
+<div class="relative group md:col-span-1">
+<input class="peer w-full bg-transparent border-0 border-b border-outline-variant py-2 focus:border-primary transition-colors text-on-surface placeholder-transparent" id="cvv" placeholder=" " type="password"/>
+<label class="absolute left-0 -top-4 font-label-caps text-label-caps text-on-surface-variant peer-placeholder-shown:top-2 peer-placeholder-shown:text-body-md peer-focus:-top-4 peer-focus:text-label-caps peer-focus:text-primary transition-all" for="cvv">CVV</label>
+</div>
+</div>
+<div class="flex items-center gap-3 pt-4">
+<input class="w-4 h-4 rounded border-outline-variant bg-transparent text-primary focus:ring-primary ring-offset-background" id="savecard" type="checkbox"/>
+<label class="font-body-md text-body-md text-on-surface-variant cursor-pointer" for="savecard">Save this card for future acquisitions</label>
+</div>
+</section>
+<div class="flex items-center justify-between text-on-surface-variant/60 pt-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">lock</span>
+<span class="font-label-caps text-label-caps">Secure 256-bit SSL encrypted connection</span>
+</div>
+<div class="flex gap-4">
+<img alt="Visa" class="h-4 opacity-50 grayscale hover:grayscale-0 transition-all cursor-default" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9WrL9v5B3Pmi7Oawde1v_MyfrDThguZ-ZBRbnxyLielAIhqCsoEVP6mwQNExpGA09LjKcze1eCw6pmrLlIfCxIRsJxFFzdvr7lcDANjN79_7erOqFMS2e8Ns68qIiXf0_uQUWoZSGYDR5--Tf4uR4kY506bvugdZ8kf4KeyfZjj753MCpaNe6A5yWwFn1Ue1lFgYAsZBFUsFpTL9DxLkxw5wsmlb-K1cweiU97uEoMmcR9_fItaGfgb9hkgYtSHxdpX0oyj0XSqQ"/>
+<img alt="Mastercard" class="h-4 opacity-50 grayscale hover:grayscale-0 transition-all cursor-default" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyc8mXzbnBEAr3GGcAkmGS1-gM6yFE57O_18SXXzPN9fCmP07TuOu1mk4iUj1Q8J4xFn9VMECudH0n3THxYd6ijeEUdqrVh0m5WLNwCABVcniR-ZbncKi23kEuXWm9U8s66MuKyb82nqpodpBe46UIfyJ3xQyjgTWz5PzZEAedUYnG8fLsWAjwR8T9bMQJf9dq1TkEIf_nR4zsQrcMqOrTgCy5lo_WrMt--fjkk9K284Qrvx_GQf4_Sm4kMy3F7rfyxxTLzUsi4qU"/>
+</div>
+</div>
+</div>
+<!-- Order Summary Sidebar (Right) -->
+<aside class="lg:col-span-4 sticky top-24">
+<div class="luxury-card p-stack-md">
+<h3 class="font-headline-md text-headline-md mb-stack-sm border-b border-outline-variant/30 pb-4">ORDER SUMMARY</h3>
+<!-- Item List -->
+<div class="space-y-4 mb-6">
+<div class="flex gap-4">
+<div class="w-20 h-20 bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A high-end luxury mechanical wristwatch with a complex tourbillon movement visible through the sapphire crystal. The watch is presented against a dark, moody background with subtle golden highlights that reflect the premium metallic finish of the casing. The overall aesthetic is one of precision, craftsmanship, and timeless elegance within the horology domain." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzVpIaZjhC9QkT-DWnaTz6pbb-6eu-6s-Gh3mWfScoX-jW0hfxin0c09aeN3A8qS0JkKjFC_vz2oKRR3VhL5wrejTAG5QW85DMIotQdbyNkQWMSDZ2MXZ--tjLRv1DSfhgdVAVWSyxN4iNjgD5KCDOduvuHhRLZKnmG2yVOz_0l8caqqjChQYDJGtBWO9r6GfbpSaaeY-01NvyY8KdXyV4juE8KYJnfO3sNlu_tLxzgd6pu8J_iBycK4HhLJOWE7AY89PiHFC7fA4"/>
+</div>
+<div class="flex-1">
+<p class="font-body-md text-body-md text-on-surface font-bold">MERIDIAN ALTITUDE X1</p>
+<p class="font-label-caps text-label-caps text-on-surface-variant">EDITION: MIDNIGHT</p>
+<p class="font-currency-display text-currency-display text-primary mt-1">€24,500.00</p>
+</div>
+</div>
+</div>
+<!-- Totals -->
+<div class="space-y-3 pt-6 border-t border-outline-variant/30">
+<div class="flex justify-between font-label-caps text-label-caps">
+<span class="text-on-surface-variant">SUBTOTAL</span>
+<span>€24,500.00</span>
+</div>
+<div class="flex justify-between font-label-caps text-label-caps">
+<span class="text-on-surface-variant">SHIPPING</span>
+<span class="text-tertiary">COMPLIMENTARY</span>
+</div>
+<div class="flex justify-between font-label-caps text-label-caps">
+<span class="text-on-surface-variant">ESTIMATED TAX (VAT 23%)</span>
+<span>€5,635.00</span>
+</div>
+<div class="flex justify-between pt-4 border-t border-primary/30">
+<span class="font-headline-md text-headline-md">TOTAL</span>
+<span class="font-headline-md text-headline-md text-primary">€30,135.00</span>
+</div>
+</div>
+<button class="w-full mt-stack-md bg-primary text-on-primary py-4 font-label-caps text-label-caps font-bold hover:bg-surface-tint transition-all flex items-center justify-center gap-2 group">
+<span class="material-symbols-outlined text-sm group-hover:scale-110 transition-transform" style="font-variation-settings: 'FILL' 1;">lock</span>
+                        COMPLETE TRANSACTION
+                    </button>
+</div>
+<p class="mt-4 text-center text-on-surface-variant/60 font-label-caps text-[10px] tracking-widest px-4">
+                    BY CLICKING COMPLETE TRANSACTION, YOU AGREE TO MERIDIAN'S TERMS OF SERVICE AND PRIVACY POLICY.
+                </p>
+</aside>
+</div>
+</main>
+<!-- Footer (Shared Component Logic) -->
+<footer class="bg-surface-container-low border-t border-outline-variant/30 w-full px-margin-mobile md:px-margin-desktop py-stack-md flex flex-col items-center gap-unit text-center mt-stack-lg">
+<h2 class="font-headline-md text-headline-md text-primary tracking-widest uppercase">MERIDIAN</h2>
+<div class="flex flex-wrap justify-center gap-6 my-4">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline transition-all" href="#">Boutique Locator</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline transition-all" href="#">Watch Servicing</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline transition-all" href="#">Returns Policy</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline transition-all" href="#">GDPR Settings</a>
+</div>
+<p class="font-label-caps text-label-caps text-on-surface-variant/60 mt-4 tracking-widest">© 2024 MERIDIAN. ALL RIGHTS RESERVED.</p>
+</footer>
+<script>
+        function selectPayment(element) {
+            // Remove active state from all
+            document.querySelectorAll('.luxury-card').forEach(card => {
+                card.classList.remove('active-payment');
+                const text = card.querySelector('.font-label-caps');
+                const icon = card.querySelector('.material-symbols-outlined');
+                if (text) text.classList.replace('text-primary', 'text-on-surface-variant');
+                if (icon) {
+                    icon.classList.replace('text-primary', 'text-on-surface-variant');
+                    icon.style.fontVariationSettings = "'FILL' 0";
+                }
+            });
+
+            // Add active state to clicked
+            element.classList.add('active-payment');
+            const activeText = element.querySelector('.font-label-caps');
+            const activeIcon = element.querySelector('.material-symbols-outlined');
+            if (activeText) activeText.classList.replace('text-on-surface-variant', 'text-primary');
+            if (activeIcon) {
+                activeIcon.classList.replace('text-on-surface-variant', 'text-primary');
+                activeIcon.style.fontVariationSettings = "'FILL' 1";
+            }
+        }
+    </script>
+<script src="assets/js/nav.js"></script></body></html>

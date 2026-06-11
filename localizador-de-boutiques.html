@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;600;700&amp;family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            background-color: #181309;
+            color: #ede1d1;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom Scrollbar for the Boutique List */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #130d05;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #504533;
+        }
+        .boutique-card:hover {
+            box-shadow: 0 4px 20px rgba(243, 175, 0, 0.08);
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "surface-container-low": "#211b11",
+                "surface-tint": "#ffba21",
+                "on-tertiary-container": "#00516c",
+                "on-tertiary-fixed": "#001e2b",
+                "on-tertiary": "#003548",
+                "on-background": "#ede1d1",
+                "surface-container": "#251f15",
+                "outline-variant": "#504533",
+                "primary-fixed": "#ffdea8",
+                "on-tertiary-fixed-variant": "#004d67",
+                "surface-container-lowest": "#130d05",
+                "on-error-container": "#ffdad6",
+                "surface-dim": "#181309",
+                "surface-bright": "#3f382d",
+                "surface-container-highest": "#3b3429",
+                "on-secondary": "#402d00",
+                "surface": "#181309",
+                "secondary-fixed-dim": "#f6be3b",
+                "on-primary-fixed": "#271900",
+                "inverse-surface": "#ede1d1",
+                "secondary-fixed": "#ffdea0",
+                "on-primary-fixed-variant": "#5e4200",
+                "on-secondary-fixed": "#261a00",
+                "tertiary-fixed-dim": "#73d1ff",
+                "on-error": "#690005",
+                "secondary-container": "#c29100",
+                "secondary": "#f6be3b",
+                "background": "#181309",
+                "surface-variant": "#3b3429",
+                "tertiary-container": "#43c8ff",
+                "tertiary-fixed": "#c1e8ff",
+                "on-primary-container": "#634500",
+                "primary": "#ffd07c",
+                "on-surface-variant": "#d5c4ac",
+                "error-container": "#93000a",
+                "tertiary": "#a4dfff",
+                "on-surface": "#ede1d1",
+                "inverse-primary": "#7c5800",
+                "primary-container": "#f3af00",
+                "outline": "#9d8f79",
+                "inverse-on-surface": "#362f25",
+                "on-secondary-container": "#402e00",
+                "primary-fixed-dim": "#ffba21",
+                "on-secondary-fixed-variant": "#5c4300",
+                "on-primary": "#422d00",
+                "surface-container-high": "#30291f",
+                "error": "#ffb4ab"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "margin-mobile": "20px",
+                "stack-lg": "64px",
+                "gutter": "32px",
+                "container-max": "1280px",
+                "stack-sm": "16px",
+                "unit": "8px",
+                "stack-md": "32px",
+                "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                "body-md": ["Hanken Grotesk"],
+                "headline-lg-mobile": ["Libre Caslon Text"],
+                "currency-display": ["Libre Caslon Text"],
+                "label-caps": ["Hanken Grotesk"],
+                "display-lg": ["Libre Caslon Text"],
+                "headline-lg": ["Libre Caslon Text"],
+                "headline-md": ["Libre Caslon Text"],
+                "body-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                "currency-display": ["20px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "400"}],
+                "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-on-surface overflow-hidden">
+<!-- Top Navigation Anchor -->
+<header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-outline-variant/30 px-margin-mobile md:px-margin-desktop py-4 flex justify-between items-center">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:text-surface-tint transition-colors">language</span>
+</div>
+<h1 class="font-headline-md text-headline-md text-primary tracking-widest uppercase">MERIDIAN</h1>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface cursor-pointer hover:text-surface-tint transition-colors">shopping_bag</span>
+</div>
+</header>
+<main class="relative h-screen pt-[64px]">
+<!-- Fullscreen Map Background -->
+<div class="absolute inset-0 z-0 opacity-40">
+<img class="w-full h-full object-cover" data-alt="A dark-themed, minimalist architectural map showing the urban grid of a major European city. The map uses deep obsidian and slate tones with faint golden threads representing major boulevards. The aesthetic is high-end editorial, evoking a sense of heritage and precision. Soft atmospheric lighting highlights the geometric patterns of the city streets from a high-altitude perspective." data-location="Europe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqsgmFgT3wuCw0oDzIjcF4-GDOWABsU7MkBqlo66pc5_tKyxJHdGpnmPkdtAMigFUbVbpL6ereyWbG-BvS3WQLt1krfewzVAEHzHDH1cYnPPdTEMIvY1N1y_2Lz-J2YcK4t4Vdezazvi-96SzNLkTiKl92AD9QDwt67CfwmudCXEP3TVHoalgPNq7C5KKHdzR1stV9HYDt5hE7RkN0bXf7F3gfWemAn5Vv0oGGk0CxtC4NUdKEcFm7Bl3QLh8NGv8-kN0xNPe8FbE"/>
+<!-- Simulated UI Layer over map -->
+<div class="absolute inset-0 bg-gradient-to-r from-background via-transparent to-transparent"></div>
+</div>
+<!-- Sidebar Content -->
+<div class="relative z-10 w-full md:w-[480px] h-full bg-background/90 backdrop-blur-xl border-r border-outline-variant/30 flex flex-col p-6 md:p-8 overflow-hidden">
+<div class="mb-stack-md mt-4">
+<h2 class="font-headline-lg text-headline-lg mb-2">Localizador de Boutiques</h2>
+<p class="font-body-md text-on-surface-variant max-w-sm">Encontre a sua Boutique Meridian mais próxima e experimente a precisão intemporal.</p>
+</div>
+<!-- Search & Filter -->
+<div class="space-y-6 mb-stack-md">
+<div class="relative">
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2">PROCURAR POR CIDADE OU CÓDIGO POSTAL</label>
+<div class="flex items-center border-b border-outline-variant transition-colors focus-within:border-primary-container">
+<input class="w-full bg-transparent py-3 text-body-lg focus:ring-0 border-none outline-none placeholder:text-outline/50" placeholder="Ex: Lisboa, Madrid, Paris..." type="text"/>
+<span class="material-symbols-outlined text-primary-container">search</span>
+</div>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-3">FILTRAR POR REGIÃO</label>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-2 border border-primary-container text-primary-container font-label-caps text-[10px] uppercase tracking-wider hover:bg-primary-container/10 transition-all">Europe</button>
+<button class="px-4 py-2 border border-outline-variant text-on-surface-variant font-label-caps text-[10px] uppercase tracking-wider hover:border-primary-container transition-all">Americas</button>
+<button class="px-4 py-2 border border-outline-variant text-on-surface-variant font-label-caps text-[10px] uppercase tracking-wider hover:border-primary-container transition-all">Asia</button>
+</div>
+</div>
+</div>
+<!-- Boutique List -->
+<div class="flex-1 overflow-y-auto custom-scrollbar pr-2 space-y-4">
+<!-- Boutique 1 -->
+<div class="boutique-card group p-5 border border-outline-variant/30 bg-surface-container-low transition-all duration-300 cursor-pointer">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-primary">Meridian Lisboa</h3>
+<span class="border border-green-500/30 text-green-500 font-label-caps text-[10px] px-2 py-0.5 rounded-full">Aberto</span>
+</div>
+<p class="font-body-md text-on-surface-variant mb-4">Avenida da Liberdade, 190<br/>1250-147 Lisboa, Portugal</p>
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">call</span>
+<span class="font-body-md">+351 210 000 000</span>
+</div>
+<a class="flex items-center gap-1 text-primary-container font-label-caps text-label-caps hover:gap-2 transition-all group-hover:text-surface-tint" href="#">
+                            Como Chegar <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Boutique 2 -->
+<div class="boutique-card group p-5 border border-outline-variant/30 bg-surface-container-low transition-all duration-300 cursor-pointer">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-primary">Meridian Madrid</h3>
+<span class="border border-green-500/30 text-green-500 font-label-caps text-[10px] px-2 py-0.5 rounded-full">Aberto</span>
+</div>
+<p class="font-body-md text-on-surface-variant mb-4">Calle de Serrano, 47<br/>28001 Madrid, Espanha</p>
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">call</span>
+<span class="font-body-md">+34 910 000 000</span>
+</div>
+<a class="flex items-center gap-1 text-primary-container font-label-caps text-label-caps hover:gap-2 transition-all" href="#">
+                            Como Chegar <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Boutique 3 -->
+<div class="boutique-card group p-5 border border-outline-variant/30 bg-surface-container-low transition-all duration-300 cursor-pointer">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-primary">Meridian Paris</h3>
+<span class="border border-outline-variant/30 text-on-surface-variant font-label-caps text-[10px] px-2 py-0.5 rounded-full">Fechado</span>
+</div>
+<p class="font-body-md text-on-surface-variant mb-4">Place Vendôme, 12<br/>75001 Paris, França</p>
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">call</span>
+<span class="font-body-md">+33 1 00 00 00 00</span>
+</div>
+<a class="flex items-center gap-1 text-primary-container font-label-caps text-label-caps hover:gap-2 transition-all" href="#">
+                            Como Chegar <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Floating Action Pin (Desktop Simulation) -->
+<div class="hidden md:flex absolute top-1/2 left-[60%] -translate-y-1/2 flex-col items-center gap-2 z-20 animate-bounce duration-[2000ms]">
+<div class="bg-primary p-2 rounded-full shadow-[0_0_20px_rgba(243,175,0,0.4)] border-2 border-background">
+<span class="material-symbols-outlined text-background font-bold">location_on</span>
+</div>
+<div class="bg-background/90 backdrop-blur px-4 py-2 border border-primary/20">
+<span class="font-label-caps text-primary">MERIDIAN LISBOA</span>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Shell (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 flex justify-around items-center bg-surface-container-lowest border-t border-outline-variant/30 py-2">
+<div class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-caps text-[10px]">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all">
+<span class="material-symbols-outlined">watch</span>
+<span class="font-label-caps text-[10px]">Collection</span>
+</div>
+<div class="flex flex-col items-center justify-center text-primary scale-95 duration-200">
+<span class="material-symbols-outlined">search</span>
+<span class="font-label-caps text-[10px]">Search</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-caps text-[10px]">Account</span>
+</div>
+</nav>
+<!-- Footer for Desktop (Optional addition for full page context) -->
+<footer class="hidden md:flex w-full px-margin-mobile md:px-margin-desktop py-12 flex-col items-center gap-4 text-center bg-surface-container-low border-t border-outline-variant/30">
+<h2 class="font-headline-md text-primary tracking-widest uppercase">MERIDIAN</h2>
+<div class="flex gap-8">
+<a class="font-label-caps text-primary underline" href="#">Boutique Locator</a>
+<a class="font-label-caps text-on-surface-variant hover:text-primary transition-all" href="#">Watch Servicing</a>
+<a class="font-label-caps text-on-surface-variant hover:text-primary transition-all" href="#">Returns Policy</a>
+<a class="font-label-caps text-on-surface-variant hover:text-primary transition-all" href="#">GDPR Settings</a>
+</div>
+<p class="font-label-caps text-[10px] text-on-surface-variant mt-4">© 2024 MERIDIAN. ALL RIGHTS RESERVED.</p>
+</footer>
+<script>
+        // Micro-interactions for Boutique cards
+        const cards = document.querySelectorAll('.boutique-card');
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.borderColor = 'rgba(243, 175, 0, 0.4)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.borderColor = 'rgba(80, 69, 51, 0.3)';
+            });
+            card.addEventListener('click', () => {
+                // Remove active class from others
+                cards.forEach(c => c.classList.remove('bg-surface-container-high'));
+                // Add active class
+                card.classList.add('bg-surface-container-high');
+            });
+        });
+
+        // Region Filter Toggle
+        const buttons = document.querySelectorAll('button');
+        buttons.forEach(btn => {
+            if (btn.innerText === 'EUROPE' || btn.innerText === 'AMERICAS' || btn.innerText === 'ASIA') {
+                btn.addEventListener('click', () => {
+                    buttons.forEach(b => {
+                        b.classList.remove('border-primary-container', 'text-primary-container');
+                        b.classList.add('border-outline-variant', 'text-on-surface-variant');
+                    });
+                    btn.classList.add('border-primary-container', 'text-primary-container');
+                    btn.classList.remove('border-outline-variant', 'text-on-surface-variant');
+                });
+            }
+        });
+    </script>
+<script src="assets/js/nav.js"></script></body></html>

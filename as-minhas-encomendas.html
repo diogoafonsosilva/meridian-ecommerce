@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&amp;family=Hanken+Grotesk:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            font-size: 20px;
+        }
+        body {
+            background-color: #181309;
+            color: #ede1d1;
+            -webkit-font-smoothing: antialiased;
+        }
+        .order-card-hover:hover {
+            box-shadow: 0 4px 20px rgba(243, 175, 0, 0.08);
+        }
+        .gold-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(243, 175, 0, 0.3), transparent);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#211b11",
+                        "surface-tint": "#ffba21",
+                        "on-tertiary-container": "#00516c",
+                        "on-tertiary-fixed": "#001e2b",
+                        "on-tertiary": "#003548",
+                        "on-background": "#ede1d1",
+                        "surface-container": "#251f15",
+                        "outline-variant": "#504533",
+                        "primary-fixed": "#ffdea8",
+                        "on-tertiary-fixed-variant": "#004d67",
+                        "surface-container-lowest": "#130d05",
+                        "on-error-container": "#ffdad6",
+                        "surface-dim": "#181309",
+                        "surface-bright": "#3f382d",
+                        "surface-container-highest": "#3b3429",
+                        "on-secondary": "#402d00",
+                        "surface": "#181309",
+                        "secondary-fixed-dim": "#f6be3b",
+                        "on-primary-fixed": "#271900",
+                        "inverse-surface": "#ede1d1",
+                        "secondary-fixed": "#ffdea0",
+                        "on-primary-fixed-variant": "#5e4200",
+                        "on-secondary-fixed": "#261a00",
+                        "tertiary-fixed-dim": "#73d1ff",
+                        "on-error": "#690005",
+                        "secondary-container": "#c29100",
+                        "secondary": "#f6be3b",
+                        "background": "#181309",
+                        "surface-variant": "#3b3429",
+                        "tertiary-container": "#43c8ff",
+                        "tertiary-fixed": "#c1e8ff",
+                        "on-primary-container": "#634500",
+                        "primary": "#ffd07c",
+                        "on-surface-variant": "#d5c4ac",
+                        "error-container": "#93000a",
+                        "tertiary": "#a4dfff",
+                        "on-surface": "#ede1d1",
+                        "inverse-primary": "#7c5800",
+                        "primary-container": "#f3af00",
+                        "outline": "#9d8f79",
+                        "inverse-on-surface": "#362f25",
+                        "on-secondary-container": "#402e00",
+                        "primary-fixed-dim": "#ffba21",
+                        "on-secondary-fixed-variant": "#5c4300",
+                        "on-primary": "#422d00",
+                        "surface-container-high": "#30291f",
+                        "error": "#ffb4ab"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "stack-lg": "64px",
+                        "gutter": "32px",
+                        "container-max": "1280px",
+                        "stack-sm": "16px",
+                        "unit": "8px",
+                        "stack-md": "32px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Libre Caslon Text"],
+                        "currency-display": ["Libre Caslon Text"],
+                        "label-caps": ["Hanken Grotesk"],
+                        "display-lg": ["Libre Caslon Text"],
+                        "headline-lg": ["Libre Caslon Text"],
+                        "headline-md": ["Libre Caslon Text"],
+                        "body-lg": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                        "currency-display": ["20px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="flex flex-col min-h-screen">
+<!-- TopAppBar -->
+<header class="bg-background border-b border-outline-variant/30 flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 sticky top-0 z-50">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary">language</span>
+</div>
+<div class="font-headline-md text-headline-md text-primary tracking-widest uppercase">MERIDIAN</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary">shopping_bag</span>
+</div>
+</header>
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-md">
+<!-- Breadcrumbs / Back navigation -->
+<nav class="flex items-center gap-2 mb-stack-sm text-on-surface-variant font-label-caps text-label-caps">
+<a class="hover:text-primary transition-colors" href="#">CONTA</a>
+<span class="material-symbols-outlined text-[12px]">chevron_right</span>
+<span class="text-primary">AS MINHAS ENCOMENDAS</span>
+</nav>
+<!-- Header -->
+<header class="mb-stack-lg border-b border-outline-variant/10 pb-stack-sm">
+<h1 class="font-headline-lg text-headline-lg text-on-surface mb-2">As Minhas Encomendas</h1>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-80">Acompanhe o estado das suas aquisições e o histórico da sua coleção Meridian.</p>
+</header>
+<!-- Orders List -->
+<div class="space-y-stack-md">
+<!-- Active Order -->
+<section class="group relative bg-surface-container border border-outline-variant/20 p-6 md:p-8 order-card-hover transition-all duration-300">
+<div class="flex flex-col md:flex-row md:items-start gap-gutter">
+<!-- Thumbnail -->
+<div class="w-full md:w-48 aspect-square bg-surface-container-highest flex items-center justify-center overflow-hidden border border-outline-variant/30">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A macro close-up photograph of a luxury mechanical watch with an intricate skeleton dial, showcasing golden gears and bridges. The timepiece is set against a dark, moody background with atmospheric lighting highlighting the metallic textures and precision engineering. The color palette is dominated by deep obsidians and warm golden accents, reflecting the Meridian brand's prestigious and elegant aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9R_UFM6aLXH9YcLNcSWpScnxsirJ-DVov-54sZLzT6kIqhyLX5HDLIVvYP7O79yBKt0BT-UXQMsxKKxiWdlZ53wE1Y8bCx79em0-gtfcDebkpke9kdvctoqDPIupVDoYFs8SdxMJRVgvxB1Y3OgWTtIAIsxpjJe4tR_LH5iA9idN1mPfKHkt99xALcw5wIOIJ78-4EVg-qb4jdXHnRMyOzefXke9Nh66v5htM9tpK1iKmUDSJCXxFMeFwwlzQkGkPIAg28h_fxoI"/>
+</div>
+<!-- Details -->
+<div class="flex-grow flex flex-col justify-between h-full">
+<div class="flex flex-col md:flex-row md:justify-between items-start mb-6">
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant mb-1 block">REFERÊNCIA</span>
+<h3 class="font-headline-md text-headline-md text-primary">#ORD-882910</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Meridian Heritage Chronometer — Black Edition</p>
+</div>
+<div class="mt-4 md:mt-0 text-left md:text-right">
+<span class="px-3 py-1 border border-primary/30 text-primary font-label-caps text-[10px] tracking-widest inline-block">EM TRÂNSITO</span>
+<div class="mt-2 font-currency-display text-currency-display text-on-surface">12.450,00 €</div>
+</div>
+</div>
+<div class="gold-divider mb-6"></div>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="grid grid-cols-2 md:flex gap-gutter">
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant block mb-1">DATA</span>
+<span class="font-body-md text-body-md">14 Outubro, 2024</span>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant block mb-1">ENVIO</span>
+<span class="font-body-md text-body-md">DHL Express Priority</span>
+</div>
+</div>
+<a class="inline-flex items-center justify-center bg-primary-container text-on-primary px-8 py-3 font-label-caps text-label-caps hover:bg-surface-tint transition-colors duration-300" href="#">
+                                TRACK ORDER
+                                <span class="material-symbols-outlined ml-2">local_shipping</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Delivered Order -->
+<section class="group relative bg-surface-container/40 border border-outline-variant/10 p-6 md:p-8 order-card-hover transition-all duration-300">
+<div class="flex flex-col md:flex-row md:items-start gap-gutter">
+<!-- Thumbnail -->
+<div class="w-full md:w-48 aspect-square bg-surface-container-highest flex items-center justify-center overflow-hidden border border-outline-variant/20 opacity-70 group-hover:opacity-100 transition-opacity">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A professional studio shot of an elegant rose gold watch with a dark leather strap, lying on a polished black surface with subtle reflections. The lighting is soft and directional, emphasizing the clean lines and minimalist watch face. The overall mood is one of sophisticated luxury, utilizing a rich palette of deep gold, warm browns, and charcoal blacks to create a timeless, editorial feel consistent with high-end horology." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCq1Bzthb-lIeujpYNJnCKptXmH0gObQG2IeDlu5Gp33tL-JDRBgs_q6i0GQmHfiSKnH_JQDCtTRf2gnkZ5du9wx5sn7LkCB62lseFV0ax6sBvuJLw4ducsjvwm6M2_qNfnIQs99jcG5DH10ZpLEuDz4-_uWZ0e9Ck6zjcFTfUYEr8xYG_1TPKIYwA4oJYLn06ciBJSMOq_5aHDVluxt2N---N99r8EDJh-3n4oirRATIVrgIAxQgBEg3p2IuP0Icb8jK4gvYMHtKA"/>
+</div>
+<!-- Details -->
+<div class="flex-grow flex flex-col justify-between h-full">
+<div class="flex flex-col md:flex-row md:justify-between items-start mb-6">
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant mb-1 block opacity-60">REFERÊNCIA</span>
+<h3 class="font-headline-md text-headline-md text-on-surface opacity-80">#ORD-874102</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Meridian Eclipse 42mm — Rose Gold</p>
+</div>
+<div class="mt-4 md:mt-0 text-left md:text-right">
+<span class="px-3 py-1 border border-on-tertiary/30 text-on-tertiary-container font-label-caps text-[10px] tracking-widest inline-block bg-on-tertiary/10">ENTREGUE</span>
+<div class="mt-2 font-currency-display text-currency-display text-on-surface-variant">8.900,00 €</div>
+</div>
+</div>
+<div class="border-t border-outline-variant/10 mb-6"></div>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="grid grid-cols-2 md:flex gap-gutter">
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant block mb-1">DATA</span>
+<span class="font-body-md text-body-md text-on-surface-variant">22 Agosto, 2024</span>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant block mb-1">LOCAL</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Boutique Lisboa</span>
+</div>
+</div>
+<a class="inline-flex items-center justify-center border border-primary/40 text-primary px-8 py-3 font-label-caps text-label-caps hover:bg-primary/5 transition-colors duration-300" href="#">
+                                DETALHES
+                            </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Another Delivered Order -->
+<section class="group relative bg-surface-container/40 border border-outline-variant/10 p-6 md:p-8 order-card-hover transition-all duration-300">
+<div class="flex flex-col md:flex-row md:items-start gap-gutter">
+<!-- Thumbnail -->
+<div class="w-full md:w-48 aspect-square bg-surface-container-highest flex items-center justify-center overflow-hidden border border-outline-variant/20 opacity-70 group-hover:opacity-100 transition-opacity">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A refined, close-up shot of a stainless steel watch crown and case edge, featuring exquisite knurling and a subtle brand logo engraving. The lighting creates sharp, metallic glints against a dark, velvety shadow backdrop. The composition is asymmetrical and architectural, conveying a sense of permanent luxury and technical precision in a monochrome palette with hints of silver and deep graphite." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZJmuKspnPZml80byA7JWyDg3I6bRuMa0rAOZK--7msKQn_CocUCMTJ6ZxDbXjgGc96h0p2UVPbOd0SsYfZZ0vQfVxbEEOTJa6wfy82CbofUEq644Wr3YOHkCOlNQ7ZTRjmYqpv5kpHylCs5APM5iMT6_tXJ_7hWXXm-0RNNIn8HjJvZaiAjSDbr0M6k4XTXx2B7_yQp7v03BAW9OO1Be6aAKY__PQ5IB7t1j3IwAwnyMyvR5QfvVhqN4QiHSk7Gp9iDbo2IMmD7k"/>
+</div>
+<!-- Details -->
+<div class="flex-grow flex flex-col justify-between h-full">
+<div class="flex flex-col md:flex-row md:justify-between items-start mb-6">
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant mb-1 block opacity-60">REFERÊNCIA</span>
+<h3 class="font-headline-md text-headline-md text-on-surface opacity-80">#ORD-851922</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Service: Meridian Horizon 38mm</p>
+</div>
+<div class="mt-4 md:mt-0 text-left md:text-right">
+<span class="px-3 py-1 border border-on-tertiary/30 text-on-tertiary-container font-label-caps text-[10px] tracking-widest inline-block bg-on-tertiary/10">ENTREGUE</span>
+<div class="mt-2 font-currency-display text-currency-display text-on-surface-variant">450,00 €</div>
+</div>
+</div>
+<div class="border-t border-outline-variant/10 mb-6"></div>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="grid grid-cols-2 md:flex gap-gutter">
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant block mb-1">DATA</span>
+<span class="font-body-md text-body-md text-on-surface-variant">05 Janeiro, 2024</span>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant block mb-1">SERVIÇO</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Manutenção Completa</span>
+</div>
+</div>
+<a class="inline-flex items-center justify-center border border-primary/40 text-primary px-8 py-3 font-label-caps text-label-caps hover:bg-primary/5 transition-colors duration-300" href="#">
+                                DETALHES
+                            </a>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full px-margin-mobile md:px-margin-desktop py-stack-md flex flex-col items-center gap-unit text-center bg-surface-container-low border-t border-outline-variant/30 mt-stack-lg">
+<div class="font-headline-md text-headline-md text-primary mb-4 tracking-widest">MERIDIAN</div>
+<div class="flex flex-wrap justify-center gap-x-gutter gap-y-2 mb-6">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline transition-all" href="#">Boutique Locator</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline transition-all" href="#">Watch Servicing</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline transition-all" href="#">Returns Policy</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline transition-all" href="#">GDPR Settings</a>
+</div>
+<div class="font-body-md text-body-md text-on-surface-variant opacity-60">
+            © 2024 MERIDIAN. ALL RIGHTS RESERVED.
+        </div>
+</footer>
+<!-- BottomNavBar (Mobile only) -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center bg-surface-container-lowest py-2 border-t border-outline-variant/30 md:hidden">
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-caps text-[10px]">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all">
+<span class="material-symbols-outlined">watch</span>
+<span class="font-label-caps text-[10px]">Collection</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all">
+<span class="material-symbols-outlined">search</span>
+<span class="font-label-caps text-[10px]">Search</span>
+</button>
+<button class="flex flex-col items-center justify-center text-primary scale-95 duration-200">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-label-caps text-[10px]">Account</span>
+</button>
+</nav>
+<script>
+        // Simple interaction for the tracker button
+        document.querySelectorAll('a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') === '#') {
+                    e.preventDefault();
+                    console.log('Navigating to: ' + this.innerText);
+                }
+            });
+        });
+    </script>
+<script src="assets/js/nav.js"></script></body></html>
