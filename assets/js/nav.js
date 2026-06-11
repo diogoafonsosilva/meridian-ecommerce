@@ -3,33 +3,31 @@
 // já que o HTML exportado não traz hrefs.
 (function () {
   var TEXT_ROUTES = [
-    ['continue to payment', 'checkout-pagamento.html'],
-    ['complete transaction', 'checkout-revisao.html'],
+    ['continuar para pagamento', 'checkout-pagamento.html'],
+    ['concluir transação', 'checkout-revisao.html'],
     ['finalizar encomenda', 'encomenda-confirmada.html'],
+    ['finalizar compra', 'checkout-entrega.html'],
     ['seguir encomenda', 'seguir-encomenda.html'],
-    ['track order', 'seguir-encomenda.html'],
+    ['ver detalhes', 'produto.html'],
     ['detalhes', 'seguir-encomenda.html'],
     ['regressar à coleção', 'resultados-da-pesquisa.html'],
-    ['add to bag', 'checkout-entrega.html'],
+    ['adicionar ao saco', 'carrinho.html'],
     ['as minhas encomendas', 'as-minhas-encomendas.html'],
     ['lista de desejos', 'lista-de-desejos.html'],
     ['guia de tamanhos', 'guia-de-tamanhos.html'],
     ['serviço de manutenção', 'servico-de-manutencao.html'],
-    ['watch servicing', 'servico-de-manutencao.html'],
     ['localizador de boutiques', 'localizador-de-boutiques.html'],
-    ['boutique locator', 'localizador-de-boutiques.html'],
     ['o meu perfil', 'o-meu-perfil.html'],
     ['conta', 'o-meu-perfil.html'],
-    ['account', 'o-meu-perfil.html'],
-    ['collection', 'resultados-da-pesquisa.html'],
-    ['search', 'resultados-da-pesquisa.html'],
-    ['home', 'index.html']
+    ['coleção', 'resultados-da-pesquisa.html'],
+    ['pesquisa', 'resultados-da-pesquisa.html'],
+    ['início', 'index.html']
   ];
 
   var ICON_ROUTES = {
     arrow_back: 'BACK',
-    shopping_bag: 'checkout-entrega.html',
-    local_mall: 'checkout-entrega.html',
+    shopping_bag: 'carrinho.html',
+    local_mall: 'carrinho.html',
     favorite: 'lista-de-desejos.html',
     home: 'index.html',
     watch: 'resultados-da-pesquisa.html',
